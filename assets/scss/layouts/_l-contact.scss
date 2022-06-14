@@ -1,0 +1,83 @@
+.c-contact {
+    background: $color-03;
+    padding: 5rem 2rem 3rem;
+
+
+    h2 {
+        @include m-text($s-super-title/2, bold, 1px, 1.15, $color-white);
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .c-contact-form {
+
+        input,
+        textarea {
+            background: $color-03;
+            border: 1px solid $color-white;
+            width: 100%;
+            margin-bottom: 7px;
+            padding: 5px 10px;
+            color: rgba($color-white, 1);
+            
+            &::placeholder {
+                @include m-text($s-text-2, 300, 1.1px, 1.15, $color-white);
+                color: rgba($color-white, 0.7);
+                text-transform: uppercase;
+                margin-left: 5px;
+            }
+
+        }
+        .pulsate-fwd {
+            @include m-flex(flex, row, center, center);
+            background: $color-04;
+            border: none;
+            color: $color-black;
+            transition: 0.2s ease all;
+
+            &:active {
+                background: linear-gradient(45deg, $color-01 10%, $color-02 95%);
+                color: rgba($color-white, 1);
+            }
+        }
+        
+        textarea{
+            resize: none;
+            height: 80px;
+
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .c-contact {
+
+        .c-contact-form, h2 {
+            width: 70%;
+            margin: auto;
+        }
+        .c-contact-form {
+            box-sizing: content-box;
+
+            .input-container {
+                display: flex;
+                justify-content: end;
+
+                input {
+                    width: 50%;
+                    margin: 5px;
+                }
+                textarea {
+                    margin: 5px;
+                }
+            }
+            .pulsate-fwd {
+                width: 20% !important;
+                margin: 5px;
+                border-radius: 100px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.methodology {
+    background: linear-gradient(45deg, $color-01 10%, $color-02 95%);
+    padding: 5rem 0;
+}
+
+.th-description {
+    padding: 2rem;
+    margin: 0 auto;
+
+    h2 {
+        @include m-text($s-super-title/2, bold, 1px, 1.5, $color-white);
+        text-align: center;
+        margin-bottom: 1rem
+    }
+
+    p {
+        @include m-text($s-text-2, normal, 0.5px, 1.15, $color-white);
+        text-align: center;
+    }
+}
+
+.th-methodology {
+    @include m-flex (flex, column, center, center);
+
+    .th-card {
+        padding: 1rem;
+        width: 90%;
+        margin: 5px auto;
+        transition: 0.2s ease all;
+
+        @media (min-width:578px) {
+            width: 100%;
+        }
+
+
+
+        .th-card-img {
+            @include m-flex (flex, row, center, center);
+            overflow: hidden;
+
+            img {
+                width: 70%;
+            }
+
+        }
+
+        .th-card-body {
+            @include m-flex (flex, column, center, stretch);
+            padding: 0 1rem;
+
+            h3 {
+                @include m-text($s-super-title/2, bold, 1px, 1.15, $color-white);
+                text-align: center;
+                margin-bottom: 1rem
+            }
+
+            p {
+                @include m-text($s-text-2, normal, 0.5px, 1.15, $color-white);
+                text-align: center;
+            }
+
+        }
+
+        &:hover {
+            background: rgba($color-white, 0.05);
+        }
+
+    }
+}

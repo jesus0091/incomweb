@@ -1,0 +1,57 @@
+.m-marketing {
+    @include m-flex(flex, row, center, end);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../image/img-banner-02.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .m-img {
+        width: 100%;
+    }
+
+    .m-description {
+        position: absolute;
+        @include m-flex(flex, column, center, center);
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+
+        .m-description-title {
+            @include m-text($s-super-title/1.5, bold, 1px, 1, $color-white);
+            text-align: center;
+
+            @media (min-width: 768px){
+                @include m-text($s-super-title, bold, 1px, 1, $color-white );
+            }
+            @media (min-width: 992px){
+                @include m-text($s-super-title*1.5, bold, 1px, 1, $color-white );
+            }
+        }
+
+        .m-description-text {
+            @include m-text($s-text-2, normal, 1px, 1.25, $color-white);
+            width: 90%;
+            text-align: center;
+            margin-top: 2rem;
+
+            @media (min-width: 768px){
+                @include m-text($s-text-2*1.15, normal, 1px, 1.25, $color-white);
+                width: 70%;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(45deg, darken(rgba($color-01, 0.7), 40%) , darken(rgba($color-02, 0.7), 40%) );
+        z-index: 5;
+    }
+    
+
+}

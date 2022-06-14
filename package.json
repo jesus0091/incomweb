@@ -1,0 +1,20 @@
+{
+  "name": "incom-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus0091/incom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesus0091/incom/issues"
+  },
+  "homepage": "https://github.com/jesus0091/incom#readme",
+  "description": ""
+}
